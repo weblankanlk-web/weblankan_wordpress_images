@@ -1,7 +1,7 @@
-# Dockerfile
+# Use official WordPress with PHP 7.4
 FROM wordpress:php7.4
 
-# Install system dependencies and build tools
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     libssl-dev \
+    && docker-php-ext-configure zip \
     && docker-php-ext-install zip
 
 # Install PhpRedis
