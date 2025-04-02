@@ -1,6 +1,6 @@
 services:
   wordpress:
-    image: wordpress:php7.4
+    image: ghcr.io/weblankanlk-web/wordpress:7.4-php
     container_name: wordpress
     ports:
       - "8080:80"
