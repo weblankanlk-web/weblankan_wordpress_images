@@ -32,7 +32,7 @@ jobs:
     - name: Build Docker image
       run: |
         PROJECT_NAME=$(basename ${{ github.repository }})
-        docker build -t ghcr.io/${{ github.repository_owner }}/wordpress:7.4-php ./php-8.2-apachie
+        docker build -t ghcr.io/${{ github.repository_owner }}/wordpress:7.4-php ./php74
 
     # Push the Docker image
     - name: Push Docker image
